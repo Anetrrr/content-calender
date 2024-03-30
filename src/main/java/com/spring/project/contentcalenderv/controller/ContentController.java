@@ -1,6 +1,7 @@
 package com.spring.project.contentcalenderv.controller;
 
 import com.spring.project.contentcalenderv.model.Content;
+import com.spring.project.contentcalenderv.model.Status;
 import com.spring.project.contentcalenderv.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
 
 @RestController
 @RequestMapping("/api/content")
@@ -18,11 +20,10 @@ import java.util.Optional;
 public class ContentController {
 
     public final List<Content> content = new ArrayList<>();
-
     private final ContentRepository repository;
 
 
-    @Autowired
+
     public ContentController(ContentRepository repository) {
         this.repository = repository;
     }
@@ -65,11 +66,15 @@ public class ContentController {
     }
 
     @GetMapping("/filter/{keyword}")
-    public List<Content> findInTitle(@PathVariable String keyword) {
+    public List<Content> findByTitle(@PathVariable String keyword) {
+
         return repository.findAllByTitleContains(keyword);
 
     }
 
-
+@GetMapping("/filter/status/{status}")
+    public List<Content> findByStatus(@PathVariable Status status) {
+        return repository.listByStatus(status);
+}
 
 }

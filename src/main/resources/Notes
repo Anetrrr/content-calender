@@ -1,0 +1,5 @@
+//Notes on Docker
+//use ./mvnw spring-boot:build-image
+
+//docker image ls -a
+

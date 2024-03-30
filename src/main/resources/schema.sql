@@ -11,8 +11,8 @@
 
     );
 
-    INSERT INTO Content(title,desc,status,content_type,date_created)
-    VALUES ('My SpringTime Post', 'A Post about Spring', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);
-
-    INSERT INTO Content(title,desc,status,content_type,date_created)
-    VALUES ('My SummerTime Post', 'A Post about Summer', 'IN_PROGRESS', 'VIDEO', CURRENT_TIMESTAMP);
+--     INSERT INTO Content(title,desc,status,content_type,date_created)
+--     VALUES ('My SpringTime Post', 'A Post about Spring', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);
+--
+--     INSERT INTO Content(title,desc,status,content_type,date_created)
+--     VALUES ('My SummerTime Post', 'A Post about Summer', 'IN_PROGRESS', 'VIDEO', CURRENT_TIMESTAMP);
